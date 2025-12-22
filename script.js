@@ -1,5 +1,9 @@
 const container = document.querySelector("main");
 
+document
+  .querySelector("a")
+  .addEventListener("click", (e) => e.preventDefault());
+
 const array = [
   {
     author: {
@@ -32,16 +36,16 @@ const array = [
 let current = 0;
 
 function next() {
-    if (array.length) {
-        current ++;
-    }
-    run(current)
+  if (array.length) {
+    current++;
+  }
+  run(current);
 }
 function prev() {
   if (array.length > 0) {
-        current -= 1;
-    }
-    run(current)
+    current -= 1;
+  }
+  run(current);
 }
 
 function run(single) {
