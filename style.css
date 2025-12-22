@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   background-image: url(images/pattern-curve.svg);
   background-position: left bottom;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: 70%;
 }
