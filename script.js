@@ -36,13 +36,13 @@ const array = [
 let current = 0;
 
 function next() {
-  if (array.length) {
+  if (current < array.length -1) {
     current++;
   }
   run(current);
 }
 function prev() {
-  if (array.length > 0) {
+  if (current > 0) {
     current -= 1;
   }
   run(current);
@@ -53,7 +53,7 @@ function run(single) {
          <figure class="image-block">
             <img src="images/pattern-bg.svg" alt="" class="bg-img">
             <img src="${array[single].author.image}" alt="" class="author-img">
-            <button class="span-block"><img onclick="prev()"
+            <button type="button"><img onclick="prev()"
             src="images/icon-prev.svg" alt=""><img onclick="next()" src="images/icon-next.svg" alt=""></button>
         </figure>
         <figcaption class="hero-text">

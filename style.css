@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   background-image: url(images/pattern-curve.svg);
   background-position: left bottom;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 70%;
 }
@@ -44,25 +44,35 @@ main {
   left: 50%;
   transform: translate(-50%);
 }
-.span-block {
+
+button img{
+  display: block;
+  
+}
+button {
   border: none;
   background-color: white;
   border-radius: 40px;
   display: flex;
   align-items: center;
-
+    justify-content: space-between;
   position: absolute;
 }
-span:hover {
-  transform: scale(1.2);
-}
-span:active {
-  transform: translateY(4px);
-}
 
-.span-block:hover {
+button:hover {
   cursor: pointer;
   background-color: rgb(241, 241, 241);
+}
+
+button img:hover{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(160, 221, 236);
+  padding: 2px 5px;
+  border-radius: 20px;
+}
+button img:active{
+  transform: scale(0.8);
+  transition: all linear 0.1s;
 }
 
 /* hero-text block */
@@ -99,9 +109,7 @@ span:active {
     width: 80%;
     top: 7vw;
   }
-  .span-block {
-    justify-content: center;
-    gap: 2rem;
+  button {
     width: 80px;
     height: 40px;
     padding: 1rem;
@@ -124,7 +132,7 @@ span:active {
   main {
     position: relative;
   }
-  .span-block {
+  button {
     width: 120px;
     height: 60px;
     justify-content: center;
