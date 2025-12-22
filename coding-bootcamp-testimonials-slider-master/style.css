@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "inter";
+  src: url(inter/static/Inter-Regular.ttf);
+}
+
+:root {
+  --Blue-950: hsl(240, 38%, 20%);
+  --Gray-400: hsl(240, 18%, 77%);
+  --font-w-small: 300;
+  --font-w-large: 300;
+  --font-w-xl: 700;
+  --font-size: 32px;
+  --font-family: "inter";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/pattern-curve.svg);
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+main {
+  margin: 3rem 2rem;
+  max-width: 1200px;
+}
+
+.image-block {
+  position: relative;
+}
+
+.author-img {
+  border-radius: 0.5em;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.span-block {
+  border: none;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+}
+span:hover {
+  transform: scale(1.2);
+}
+span:active {
+  transform: translateY(4px);
+}
+
+.span-block:hover {
+  cursor: pointer;
+  background-color: rgb(241, 241, 241);
+}
+
+/* hero-text block */
+.hero-text {
+  background: url(images/pattern-quotes.svg) no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.hero-text p {
+  font-size: 1.1rem;
+}
+.author {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: 700;
+}
+.job-title {
+  color: var(--Gray-400);
+}
+@media screen and (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bg-img {
+    width: 100%;
+  }
+  .author-img {
+    width: 80%;
+    top: 7vw;
+  }
+  .span-block {
+    justify-content: center;
+    gap: 2rem;
+    width: 80px;
+    height: 40px;
+    padding: 1rem;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .hero-text {
+    background: url(images/pattern-quotes.svg) no-repeat center top;
+    background-size: 60px;
+  }
+  .hero-text p {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-size: 40%;
+  }
+  main {
+    position: relative;
+  }
+  .span-block {
+    width: 120px;
+    height: 60px;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    left: 150px;
+    bottom: 30px;
+  }
+  .author-img {
+    top: 60px;
+  }
+  .author {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .image-block {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+  }
+  .hero-text {
+    background-position: left 100px top 0px;
+    text-align: start;
+    justify-content: center;
+    position: absolute;
+    top: 170px;
+    transform: translate(21%);
+    left: -3%;
+    right: 50%;
+    z-index: 99;
+  }
+  .hero-text p {
+    margin-top: 70px;
+    font-size: 32px;
+  }
+}
