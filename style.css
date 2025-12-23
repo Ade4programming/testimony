@@ -99,6 +99,7 @@ button img:active{
   animation: all ease-in-out ;
   animation-duration: 1s;
   animation-name: texts;
+  transition: all linear 4mms  ;
 }
 @keyframes texts {
   
@@ -118,6 +119,15 @@ button img:active{
 }
 .name {
   font-weight: 700;
+  animation-name: name;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes name {
+  50%{
+    opacity: 0.5;
+  }
 }
 .job-title {
   color: var(--Gray-400);
