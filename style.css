@@ -43,11 +43,22 @@ main {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  transition-timing-function: linear;  transition-duration: 2s;
 }
 
+.bg-img, .attribution{
+  animation: img 2s ease-in-out infinite;
+}
+@keyframes img{
+  50%{
+    transform: scale(0.99);
+  }
+}
+.bg-img:hover{
+  animation-play-state: paused
+}
 button img{
   display: block;
-  
 }
 button {
   border: none;
@@ -85,6 +96,21 @@ button img:active{
 }
 .hero-text p {
   font-size: 1.1rem;
+  animation: all ease-in-out ;
+  animation-duration: 1s;
+  animation-name: texts;
+}
+@keyframes texts {
+  
+  0%{
+    transform: scaleX(1.1);
+    
+  }
+  50%{
+    transition: linear;
+    opacity: 0.2;
+    transform: rotateZ(5deg);
+  }
 }
 .author {
   display: flex;
@@ -102,12 +128,12 @@ button img:active{
     flex-direction: column;
     gap: 2rem;
   }
-  .bg-img {
-    width: 100%;
-  }
   .author-img {
     width: 80%;
     top: 7vw;
+  }
+  .bg-img{
+    width: 100%;
   }
   button {
     width: 80px;
